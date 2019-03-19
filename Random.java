@@ -1,3 +1,5 @@
+import java.util.Calendar;
+
 public class Random {
 	
 	private long p = 2147483648L;
@@ -36,6 +38,10 @@ public class Random {
 		xi = r;
 	}
 	
+	public Random() {
+		this.xi = Calendar.getInstance().getTimeInMillis()% p ;
+	}
+	
 	public int getIntRand(int min, int max) throws IllegalArgumentException{
 		if(max <= min){
 			throw new IllegalArgumentException("Parametros Invalidos");
@@ -46,5 +52,8 @@ public class Random {
 	public int getIntRand(){
 		return getIntRand(Integer.MAX_VALUE);
 	}
+	
+	
+	
 
 }
