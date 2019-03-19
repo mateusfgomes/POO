@@ -4,9 +4,11 @@ public class Main {
 	public static void main(String[] args) throws Exception{
 		
 		String s;
+		int[] i = new int[5];
 		
-		Dado d = new Dado();
-		//int i = d.rolar();
+		RolaDados d = new RolaDados(5);
+		
+		i = d.rolar("1 2");
 		
 		s = d.toString();
 		

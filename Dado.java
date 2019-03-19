@@ -1,15 +1,15 @@
 public class Dado {
 	
-	private int lado;
+	private int lados;
 	private int face;
 	Random r = new Random();
 	
 	public Dado(int n){
-		this.lado = n;
+		this.lados = n;
 	}
 	
 	public Dado(){
-		this.lado = 6;
+		this.lados = 6;
 	}
 
 	public int getLado() {
@@ -23,8 +23,6 @@ public class Dado {
 	
 	@Override
 	public String toString(){
-		
-		String s;
 		
 		switch(getLado()) {
 			case 1:
