@@ -2,19 +2,30 @@
 public class RolaDados {
 	
 	private int n_dados;
-	Dado[] d = null; 
+	Dado[] d; 
 	
 	public RolaDados(int n) {
 		n_dados = n;
 		d = new Dado[n];
+		
+		for(int i = 0; i < n_dados; i++){
+			d[i] = new Dado();
+		}
 	}
 	
 	public int[] rolar() {
 		
 		int[] faces_resultado = new int[n_dados];
+		Dado aux = new Dado();
 		
 		for(int i = 0; i < n_dados; i++) {
-			faces_resultado[i] = d[i].rolar();
+			aux = d[i];
+			aux.rolar();
+			d[i] = aux;
+		}
+		
+		for(int i = 0; i < n_dados; i++) {
+			faces_resultado[i] = d[i].getLado();
 		}
 		
 		return faces_resultado;
@@ -27,30 +38,36 @@ public class RolaDados {
 		
 		for(int i = 0; i < n_dados; i++) {
 			if(quais[i]) {
-				faces_resultado[i] = d[i].rolar();
+				d[i].rolar();
 			}
+		}
+		
+		for(int i = 0; i < n_dados; i++) {
+			faces_resultado[i] = d[i].getLado();
 		}
 		
 		return faces_resultado;
 	}
 	
-	public int[] rolar(String s) {
+	public int[] rolar(java.lang.String s) {
 		
 		char[] numeros = new char[s.length()];
 		int[] faces_resultado = new int[n_dados];
-		                          
-		numeros = s.toCharArray();		
+		                         		
+		numeros = s.toCharArray();
 		
 		for(int i = 0; i < s.length(); i++) {
 			int aux = ((int) numeros[i]) - 49;
-			if((aux >= 49 && aux <= 57) && aux <= n_dados) {
-				faces_resultado[i] = d[aux].rolar();
+			if(aux >= 0 && aux <= n_dados) {
+				d[aux].rolar();
 			}
 			else
 				continue;
 		}
 		
-		System.out.println(faces_resultado[1] + "\n");
+		for(int i = 0; i < n_dados; i++) {
+			faces_resultado[i] = d[i].getLado();
+		}
 		
 		return faces_resultado;
 	}

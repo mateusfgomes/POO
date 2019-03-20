@@ -17,7 +17,7 @@ public class Dado {
 	}
 	
 	public int rolar() {
-		face =	r.getIntRand(6) + 1;
+		face =	(r.getIntRand(6) + 1);
 		return face;
 	}
 	

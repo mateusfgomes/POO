@@ -39,6 +39,10 @@ public class Random {
 	}
 	
 	public Random() {
+		try{
+		Thread.sleep(1);
+		} catch(InterruptedException e){	
+		}
 		this.xi = Calendar.getInstance().getTimeInMillis()% p ;
 	}
 	
