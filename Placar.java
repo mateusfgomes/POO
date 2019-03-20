@@ -3,12 +3,19 @@ import java.util.Arrays;
 public class Placar {
 
 	private int[] pontuacao = new int[10];
+	public boolean pos_ocupada = false;
 	
 	public Placar(){
 		Arrays.fill(pontuacao, -1);
 	}
 	
 	public void add(int posicao, int[] dados) throws java.lang.IllegalArgumentException{
+		
+		if(pontuacao[posicao-1] != -1) {
+			pos_ocupada = true;
+			return;
+		}
+		pos_ocupada = false;
 		
 		int contador = 0;
 		int[] aux = new int[7];
