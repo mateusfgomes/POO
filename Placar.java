@@ -1,21 +1,36 @@
 import java.util.Arrays;
 
+/**
+ * 
+ * @author Mateus Ferreira Gomes
+ *
+ */
 public class Placar {
 
-	private int[] pontuacao = new int[10];
-	public boolean pos_ocupada = false;
+	private int[] pontuacao = new int[10]; //Vetor que armazena as pontuacoes que estarao no placar
+	public boolean pos_legal = true; //Variavel booleana que faz o controle se a posicao a inserir o resultado é legal ou nao
 	
+	/**
+	 * Construtor que preeenche o placar inteiro com o numero -1
+	 * a fim de realizar o controle se aquele espaco ja foi utilizado alguma vez
+	 */
 	public Placar(){
 		Arrays.fill(pontuacao, -1);
 	}
 	
+	/**
+	 * Funcao que adiciona o resultado de uma jogada no placar para realizar a contagem dos pontos
+	 * @param posicao Posicao do placar que a pontuacao sera adicionada
+	 * @param dados	O vetor resultado da rolagem dos dados
+	 * @throws java.lang.IllegalArgumentException
+	 */
 	public void add(int posicao, int[] dados) throws java.lang.IllegalArgumentException{
 		
-		if(pontuacao[posicao-1] != -1) {
-			pos_ocupada = true;
+		if(posicao < 0 || posicao > 10 || pontuacao[posicao-1] != -1) {
+			pos_legal = false;
 			return;
 		}
-		pos_ocupada = false;
+		pos_legal = true;
 		
 		int contador = 0;
 		int[] aux = new int[7];
@@ -55,13 +70,17 @@ public class Placar {
 					boolean flag_sequencia_2_6 = true;
 					
 					for(int i = 1; i < 6; i++){
-						if(aux[i] != 1) flag_sequencia_1_5 = false;
-						break;
+						if(aux[i] != 1) { 
+							flag_sequencia_1_5 = false;
+							break;
+						}
 					}
 					
 					for(int i = 2; i < 7; i++){
-						if(aux[i] != 1) flag_sequencia_2_6 = false;
-						break;
+						if(aux[i] != 1) { 
+							flag_sequencia_2_6 = false;
+							break;
+						}
 					}
 					
 					if(flag_sequencia_1_5 || flag_sequencia_2_6)
@@ -97,6 +116,10 @@ public class Placar {
 		}
 	}
 	
+	/**
+	 * Funcao que realiza a soma da pontuacao obtida pelo jogador
+	 * @return A pontuacao obtida
+	 */
 	public int getScore(){
 		
 		int soma = 0;
@@ -111,6 +134,10 @@ public class Placar {
 	
 	
 	@Override
+	/**
+	 * Funcao toString() que printa, literalmente, o placar atual obtido pelo jogador, ou seja,
+	 * onde ele colocou os pontos
+	 */
 	public java.lang.String toString(){
 		
 		String ans = " ";
