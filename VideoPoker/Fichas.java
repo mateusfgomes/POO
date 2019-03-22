@@ -1,8 +1,7 @@
-
 public class Fichas {
 
-	private int saldoFichas;
-	private int aposta;
+	public int saldoFichas;
+	public int aposta;
 	
 	/**
 	 * Construtor iniciliza saldo fichas com 200(Padrao).
@@ -36,6 +35,10 @@ public class Fichas {
 	 */
 	public int getSaldo(){
 		return this.saldoFichas;
+	}
+
+	public void setAposta(int n){
+		this.aposta = n;
 	}
 	
 	
@@ -95,18 +98,22 @@ public class Fichas {
 
 		if(sequenciaAlta == 1 && flagFlush == 1){
 			retornaJogada += "PARABENS ROYAL STRAIGHT FLUSH";
+			this.saldoFichas = this.saldoFichas + (200*this.aposta);
 			return retornaJogada;
 		}
 		else if(flagSequencia == 1 && flagFlush ==1){
 			retornaJogada += "PARABENS STRAIGHT FLUSH";
+			this.saldoFichas = this.saldoFichas + (100*this.aposta);
 			return retornaJogada;
 		}
 		else if(flagFlush == 1){
 			retornaJogada += "PARABENS FLUSH";
+			this.saldoFichas = this.saldoFichas + (10*this.aposta);
 			return retornaJogada;
 		}	
 		else if(flagSequencia == 1 || sequenciaAlta == 1){
 			retornaJogada += "PARABENS SEQUENCIA";
+			this.saldoFichas = this.saldoFichas + (5*this.aposta);
 			return retornaJogada;
 		}
 		else{                   //Caso entre aqui, jogador nao possui: Royal/Straight flush/flusg/straight.
@@ -122,6 +129,7 @@ public class Fichas {
 
 			if(flagQuadra == 1){
 				retornaJogada += "PARABENS QUADRA";
+				this.saldoFichas = this.saldoFichas + (50*this.aposta);
 				return retornaJogada;
 			}
 			else{
@@ -140,18 +148,22 @@ public class Fichas {
 
 				if(flagTrinca == 1 && flagPar == 1){
 					retornaJogada += "PARABENS FULL HOUSE";
+					this.saldoFichas = this.saldoFichas + (20*this.aposta);
 					return retornaJogada;
 				}
 				else if(flagTrinca == 1){
 					retornaJogada += "PARABENS TRINCA";
+					this.saldoFichas = this.saldoFichas + (2*this.aposta);
 					return retornaJogada;
 				}
 				else if(flagPar == 2){
 					retornaJogada += "PARABENS TWO PAIR";
+					this.saldoFichas = this.saldoFichas + (this.aposta);
 					return retornaJogada;
 				}
 				else{
 					retornaJogada += "PERDEU DISGRACA";
+					this.saldoFichas = this.saldoFichas - this.aposta;
 					return retornaJogada;
 				}
 
