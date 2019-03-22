@@ -1,7 +1,7 @@
 
 /**
  * Jogo de VideoPoker desenvolvido para a aula de Programacao Orientada a Objetos 
- * @author Mateus Ferreira Gomes
+ * @author Mateus Ferreira Gomes e Guilherme Targon Marques Barcellos
  *
  */
 public class VideoPoker {	
@@ -13,6 +13,7 @@ public class VideoPoker {
 		String ans;
 		int pos;
 		int pontos;
+		int aposta;
 		int[][] resultado = new int[5][2];
 		SorteiaCartas c = new SorteiaCartas();
 		Fichas f = new Fichas();
@@ -20,10 +21,14 @@ public class VideoPoker {
 		System.out.println("Bem vindo ao VideoPoker\n\n");
 		
 		
-		for(int i = 0; i < 10; i++){
+		while(f.getSaldo() > 0){
 			System.out.println("Pressione ENTER para iniciar a rodada\n");
+			
 			inicia = EntradaTeclado.leString();
-			if(inicia != null) {
+			System.out.println("Aposta\n");
+			aposta = EntradaTeclado.leInt();
+			f.setAposta(aposta);
+			if(inicia != null && aposta > 0 && aposta <= f.getSaldo()) {
 				resultado = c.sorteia("1 2 3 4 5");
 				mostra_jogadas = c.toString();
 				System.out.println(mostra_jogadas);
@@ -47,14 +52,13 @@ public class VideoPoker {
 				resultado[3][1] = 2;
 				resultado[4][1] = 1;
 				*/
-				
-				for(int k = 0; k< 5; k++) {
-					System.out.println(k+" naipe "+resultado[k][1]);
-				}
 				ans = f.verificaCombinacoes(resultado);
 				System.out.println(ans);
+				System.out.println(f.getSaldo());
 			}
+			
 		}
+		
 	}
 	
 }
