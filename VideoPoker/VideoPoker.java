@@ -1,7 +1,7 @@
 
 /**
  * Jogo de VideoPoker desenvolvido para a aula de Programacao Orientada a Objetos 
- * @author Mateus Ferreira Gomes e Guilherme Targon Marques Barcellos
+ * @author Mateus Ferreira Gomes
  *
  */
 public class VideoPoker {	
