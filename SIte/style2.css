@@ -1,0 +1,88 @@
+.container{
+	background-color: white;
+    text-align: center;
+}
+
+
+h2{
+    color: white;
+    
+}
+
+
+h1{
+    color: DodgerBlue;
+    font-size: 100px;
+    font-family: 'Caladea', Caladea, monospace
+}
+
+#square{
+    border-radius: 25px;
+    width: 400px; 
+    height: 400px; 
+    background: dodgerblue;
+    float: left; 
+    /*margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+    */
+}
+
+#secondsquare{
+    border-radius: 25px;
+    width: 400px; 
+    height: 400px; 
+    float: left;  
+    background: dodgerblue;
+    vertical-align: 0px;
+    
+    /*margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 80px;
+    margin-left: 700px;*/
+    
+}
+
+.background{
+	
+	height: 100px;
+	width: 20%;
+  	background-color: blue;
+
+}
+
+
+.red{
+	color :red;
+}
+.white{
+	color : white;
+	font-weight: bold;
+	font-size: 20px
+}
+.gray{
+	color : LemonChiffon4;	
+	background-color : gray;
+}
+footer{
+	color : lightblue;
+}
+
+.green{
+	color: green;
+	
+}
+p{
+	color:black;
+}
+
+.blue{
+
+	background-color: DodgerBlue;
+
+}
+
+.black{
+	&copy;color: black;
+}
