@@ -7,7 +7,7 @@
 
 .container2{
 	background-color: white;
-    height: 400px; 
+    height: 403px; 
 }
 
 .container3{
@@ -52,8 +52,7 @@ h1{
     border-radius: 25px;
     width: 400px; 
     height: 400px; 
-    background-color: white;
-    color: dodgerblue;
+    background-color: dodgerblue;
     float: left;
     cursor: pointer;
     -webkit-transition-duration: 0.4s;
@@ -65,7 +64,7 @@ h1{
     border-radius: 25px;
     width: 400px; 
     height: 400px; 
-    background: white;
+    background: blue;
     float: left;
     cursor: pointer;
     -webkit-transition-duration: 0.4s;
@@ -80,6 +79,20 @@ h1{
     float: right;  
     background: dodgerblue;
     cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s
+}
+
+#secondsquare:hover{
+    position: relative;
+    border-radius: 25px;
+    width: 400px; 
+    height: 400px; 
+    background: blue;
+    float: right;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s
 }
 
 #whitesquare{
