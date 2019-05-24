@@ -1,11 +1,25 @@
 .container{
 	background-color: white;
     text-align: center;
+    height: 260px; 
+    
+}
+
+.container2{
+	background-color: white;
+    height: 400px; 
+}
+
+.container3{
+    background-color: white;
+    height: 200px;
+    
 }
 
 
 h2{
     color: white;
+    font-family: 'Caladea', Caladea, monospace
     
 }
 
@@ -16,34 +30,80 @@ h1{
     font-family: 'Caladea', Caladea, monospace
 }
 
+#rectangle{
+    position: relative;
+    border-radius: 25px;
+    width: 300px; 
+    height: 40px; 
+    background: dodgerblue;
+    float: right;
+}
+
+#whiterectangle{
+    position: relative;
+    border-radius: 25px; 
+    height: 160px; 
+    background: white;
+    float: top;
+}
+
 #square{
+    position: relative;
     border-radius: 25px;
     width: 400px; 
     height: 400px; 
-    background: dodgerblue;
-    float: left; 
-    /*margin-top: 100px;
-    margin-bottom: 100px;
-    margin-right: 150px;
-    margin-left: 80px;
-    */
+    background-color: white;
+    color: dodgerblue;
+    float: left;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s
+}
+
+#square:hover{
+    position: relative;
+    border-radius: 25px;
+    width: 400px; 
+    height: 400px; 
+    background: white;
+    float: left;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s
 }
 
 #secondsquare{
+    position: relative;
     border-radius: 25px;
     width: 400px; 
     height: 400px; 
-    float: left;  
+    float: right;  
     background: dodgerblue;
-    vertical-align: 0px;
-    
-    /*margin-top: 100px;
-    margin-bottom: 100px;
-    margin-right: 80px;
-    margin-left: 700px;*/
-    
+    cursor: pointer;
 }
 
+#whitesquare{
+    position: relative;
+    border-radius: 25px;
+    width: 250px; 
+    height: 400px; 
+    float: left; 
+    background: white;
+    vertical-align: 0px;
+        
+}
+
+#whitesquare2{
+    position: relative;
+    border-radius: 25px;
+    width: 250px; 
+    height: 400px; 
+    float: right; 
+    background: white;
+    vertical-align: 0px;
+    
+    
+}
 .background{
 	
 	height: 100px;
@@ -51,8 +111,6 @@ h1{
   	background-color: blue;
 
 }
-
-
 .red{
 	color :red;
 }
@@ -73,8 +131,37 @@ footer{
 	color: green;
 	
 }
-p{
-	color:black;
+
+#botoes_meio{
+    color:white;
+    font-size: 23px;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 90px;
+    margin-bottom: 35px;
+}
+
+#img_caixa{
+   
+    position: absolute;
+    margin: auto;
+    top: 40%;
+    left: 0;
+    right: 0;
+    bottom: 60;
+    width: 40%;
+    
+}
+
+#botao_final{
+    
+    color:white;
+    font-size: 19px;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 3%;
+    margin-bottom: 0%;
+
 }
 
 .blue{
@@ -84,5 +171,5 @@ p{
 }
 
 .black{
-	&copy;color: black;
+	color: black;
 }
