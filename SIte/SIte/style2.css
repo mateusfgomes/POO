@@ -1,0 +1,224 @@
+.container{
+	background-color: white;
+    text-align: center;
+    height: 260px; 
+    
+}
+
+.container2{
+	background-color: white;
+    height: 403px; 
+}
+
+.container3{
+    background-color: white;
+    height: 200px;
+    
+}
+
+
+h2{
+    color: white;
+    font-family: 'Caladea', Caladea, monospace
+    
+}
+
+
+h1{
+    color: DodgerBlue;
+    font-size: 100px;
+    font-family: 'Caladea', Caladea, monospace
+}
+
+#rectangle{
+    position: relative;
+    border-radius: 25px;
+    width: 300px; 
+    height: 40px; 
+    background: dodgerblue;
+    float: right;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s
+}
+
+#rectangle:hover{
+    position: relative;
+    border-radius: 25px;
+    width: 300px; 
+    height: 40px; 
+    background: blue;
+    float: right;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s
+}
+
+#whiterectangle{
+    position: relative;
+    border-radius: 25px; 
+    height: 160px; 
+    background: white;
+    float: top;
+}
+
+#square{
+    position: relative;
+    border-radius: 25px;
+    width: 400px; 
+    height: 400px; 
+    background-color: dodgerblue;
+    float: left;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s
+}
+
+#square:hover{
+    position: relative;
+    border-radius: 25px;
+    width: 400px; 
+    height: 400px; 
+    background: blue;
+    float: left;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s
+}
+
+#secondsquare{
+    position: relative;
+    border-radius: 25px;
+    width: 400px; 
+    height: 400px; 
+    float: right;  
+    background: dodgerblue;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s
+}
+
+#secondsquare:hover{
+    position: relative;
+    border-radius: 25px;
+    width: 400px; 
+    height: 400px; 
+    background: blue;
+    float: right;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s
+}
+
+#whitesquare{
+    position: relative;
+    border-radius: 25px;
+    width: 250px; 
+    height: 400px; 
+    float: left; 
+    background: white;
+    vertical-align: 0px;
+        
+}
+
+#whitesquare2{
+    position: relative;
+    border-radius: 25px;
+    width: 250px; 
+    height: 400px; 
+    float: right; 
+    background: white;
+    vertical-align: 0px;
+    
+    
+}
+.background{
+	
+	height: 100px;
+	width: 20%;
+  	background-color: blue;
+
+}
+.red{
+	color :red;
+}
+.white{
+	color : white;
+	font-weight: bold;
+	font-size: 20px
+}
+.gray{
+	color : LemonChiffon4;	
+	background-color : gray;
+}
+footer{
+	color : lightblue;
+}
+
+.green{
+	color: green;
+	
+}
+
+#botoes_meio{
+    color:white;
+    font-size: 23px;
+    font-weight: bolder;
+    text-align: center;
+    font-family: 'Caladea', Caladea, monospace;
+    margin-top = 0px;
+    margin-bottom: 220px;
+}
+
+#img_caixa{
+   
+    position: absolute;
+    margin: auto;
+    top: 40%;
+    left: 0;
+    right: 0;
+    bottom: 60;
+    width: 40%;
+    
+}
+
+#botao_final{
+    
+    color:white;
+    font-size: 23px;
+    font-weight: bold;
+    font-family: 'Caladea', Caladea, monospace;
+    text-align: center;
+    margin-top: 1%;
+    margin-bottom: 0%;
+    cursor: pointer;
+
+}
+
+
+#texto_finalizado{
+    
+    color:dodgerblue;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Caladea', Caladea, monospace;
+    text-align: center;
+    margin-top: 0%;
+    margin-bottom: 0%;
+
+}
+
+#container_finalizado{
+    position: relative;
+    height: 400px; 
+    background: white;
+    vertical-align: 0px;
+}
+
+.blue{
+
+	background-color: DodgerBlue;
+
+}
+
+.black{
+	color: black;
+}
