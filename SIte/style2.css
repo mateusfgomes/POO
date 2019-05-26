@@ -30,6 +30,17 @@ h1{
     font-family: 'Caladea', Caladea, monospace
 }
 
+#fisica{
+    position: relative;
+    border-radius: 25px;
+    width: 300px; 
+    height: 40px; 
+    background: dodgerblue;
+    float: right;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s
+}
+
 #rectangle{
     position: relative;
     border-radius: 25px;

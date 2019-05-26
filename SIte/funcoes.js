@@ -24,3 +24,7 @@ function fazerDoacao(){
 function cadastroIndividual(){
     window.location.href = "./cadastro_i.html";
 }
+
+function cadastroAbrigo(){
+    window.location.href = "./cadastro_abrigo.html";
+}
