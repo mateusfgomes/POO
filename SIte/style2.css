@@ -163,8 +163,9 @@ footer{
     font-size: 23px;
     font-weight: bolder;
     text-align: center;
-    margin-top: 90px;
-    margin-bottom: 35px;
+    font-family: 'Caladea', Caladea, monospace;
+    margin-top = 0px;
+    margin-bottom: 220px;
 }
 
 #img_caixa{
@@ -182,16 +183,35 @@ footer{
 #botao_final{
     
     color:white;
-    font-size: 19px;
-    font-weight: bolder;
+    font-size: 23px;
+    font-weight: bold;
+    font-family: 'Caladea', Caladea, monospace;
     text-align: center;
-    margin-top: 3%;
+    margin-top: 1%;
     margin-bottom: 0%;
     cursor: pointer;
 
 }
 
 
+#texto_finalizado{
+    
+    color:dodgerblue;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Caladea', Caladea, monospace;
+    text-align: center;
+    margin-top: 0%;
+    margin-bottom: 0%;
+
+}
+
+#container_finalizado{
+    position: relative;
+    height: 400px; 
+    background: white;
+    vertical-align: 0px;
+}
 
 .blue{
 
