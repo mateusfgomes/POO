@@ -217,6 +217,19 @@ footer{
 
 }
 
+#texto_ci{
+    
+    color:dodgerblue;
+    font-size: 48px;
+    font-weight: bold;
+    font-family: 'Caladea', Caladea, monospace;
+    padding-right: 0px;
+    padding-bottom: 50px;
+    padding-left: 170px;
+
+}
+
+
 #container_finalizado{
     position: relative;
     height: 400px; 
@@ -232,4 +245,15 @@ footer{
 
 .black{
 	color: black;
+}
+
+.caixas_texto{
+    margin-left: 9%;
+    margin-right: 0%;
+    font-size: 200%;
+}
+
+input[type="text"] {
+    width: 1400px;
+    height: 45px;
 }
