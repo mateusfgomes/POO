@@ -7,24 +7,53 @@ function concluido() {
     var valor_cpf = cpf.value;
     var rg = document.getElementById("rg");
     var valor_rg = rg.value;
-    var test = confirm(valor_nome + "\n" + valor_telefone + "\n" + valor_cpf + "\n" + valor_rg);
 
-    if(test == true){
-        window.location.href = "./finalizado.html";
-    }
-    else{
-        
-    }
+    window.location.href = "./finalizado.html";
 }
 
 function fazerDoacao(){
 
 }
 
+function pagSeguro(){
+    window.location.href = "https://pagseguro.uol.com.br/#rmcl";
+}
+
+function procurandoAbrigo(){
+    window.location.href = "./procurando_abrigo.html";
+}
+
 function cadastroIndividual(){
-    window.location.href = "./cadastro_i.html";
+    window.location.href = "./cadastro_individual.html";
+}
+
+function cadastroFamiliar(){
+    window.location.href = "./cadastro_familiar.html";
+}
+
+function proxima_pessoa(){
+    window.location.href = "./cadastro_familiar_individual.html";
 }
 
 function cadastroAbrigo(){
     window.location.href = "./cadastro_abrigo.html";
+}
+
+
+function mCPF(cpf){
+    cpf=cpf.replace(/\D/g,"")
+    cpf=cpf.replace(/(\d{3})(\d)/,"$1.$2")
+    cpf=cpf.replace(/(\d{3})(\d)/,"$1.$2")
+    cpf=cpf.replace(/(\d{3})(\d{1,2})$/,"$1-$2")
+    return cpf
+}
+
+function fMascEx() {
+    obj.value=masc(obj.value)
+}
+
+function fMasc(objeto,mascara) {
+    obj=objeto
+    masc=mascara
+    setTimeout("fMascEx()",1)
 }

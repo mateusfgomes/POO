@@ -1,33 +1,219 @@
-.container{
+#container{
+    overflow: hidden;
 	background-color: white;
     text-align: center;
-    height: 260px; 
+    float: left;
+    margin: auto;
+    height: 100%;
+    width: 34.4%;
     
+}
+
+html, body {
+    height:100%;
+    width: 100%;
+}
+
+#img_inicio{
+    overflow: hidden;
+    object-fit: inherit;
+    margin-bottom: -38%;
+    float: right;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#fazer_doacao{
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+    font-size: 38px;
+    margin-top: 683px;
+    margin-left: 195px;
+    color: dodgerblue;
+
+}
+
+#voltar{
+    position: absolute;
+    margin-top: 500px;
+    margin-left: 900px;
+    float: left;
+    font-size: 38px;
+    color : dodgerblue;
+}
+
+#img_inicio_esq{
+    overflow: hidden;
+    z-index: 0;
+    object-fit: inherit;
+    margin-bottom: -112%;
+    float: left;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+img{
+    height: 100%;
+    width: 100%;
+}
+
+#img_3{
+    z-index: 0;
+    object-fit: inherit;
+    margin-bottom: -47%;
+    margin-top: -26%;
 }
 
 .container2{
+    overflow: hidden;
 	background-color: white;
     height: 403px; 
+    background-size: cover;
+}
+
+#container_imagem{
+    overflow: hidden;
+    width: 65.6%;
+    height: 100%;
+    float: right;
+    background-size: cover;
 }
 
 .container3{
+    overflow: hidden;
+    z-index: 0;
     background-color: white;
-    height: 200px;
+    height: 100%;
+    width: 100%;
     
 }
 
+#procurando_abrigo{
+    z-index: 1;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+#familia{
+    position: absolute;
+    z-index: 1;
+    margin-left: 40%;
+    margin-right: 11%;
+    margin-top: 5%;    
+    border-radius: 40px;
+    width: 400px; 
+    height: 130px;  
+    background: dodgerblue;
+    -webkit-transition: width 0.5s, height 0.5s, -webkit-transform 0.5s; /* Safari */
+    transition: width 0.5s, height 0.5s, transform 0.5s;
+    cursor: pointer;
+}
+
+#familia:hover{
+    position: absolute;
+    z-index: 1;
+    margin-left: 40%;
+    margin-right: 11%;
+    margin-top: 5%;    
+    border-radius: 40px;
+    width: 409px; 
+    height: 139px;  
+    background: dodgerblue;
+    -webkit-transition: width 0.5s, height 0.5s, -webkit-transform 0.5s; /* Safari */
+    transition: width 0.5s, height 0.5s, transform 0.5s;
+    cursor: pointer;
+}
+
+#individual{
+    position: absolute;
+    z-index: 1;
+    margin-left: 40%;
+    margin-right: 11%;
+    margin-top: 13.5%;    
+    border-radius: 40px;
+    width: 400px; 
+    height: 130px; 
+    background: dodgerblue;
+    -webkit-transition: width 0.5s, height 0.5s, -webkit-transform 0.5s; /* Safari */
+    transition: width 0.5s, height 0.5s, transform 0.5s;
+    cursor: pointer;
+}
+
+#individual:hover{
+    position: absolute;
+    z-index: 1;
+    margin-left: 40%;
+    margin-right: 11%;
+    margin-top: 13.5%;    
+    border-radius: 40px;
+    width: 409px; 
+    height: 139px; 
+    background: dodgerblue;
+    -webkit-transition: width 0.5s, height 0.5s, -webkit-transform 0.5s; /* Safari */
+    transition: width 0.5s, height 0.5s, transform 0.5s;
+    cursor: pointer;
+}
+
+#opcao{
+    z-index: 1;
+    font-size: 60px;
+    text-align: center;
+    color: black;
+    margin-top: 0%;
+
+}
+
+
+#teamabrigo{
+    font-size: 38px;
+    margin-top: 0px;
+}
+
+#cumprimento{
+    margin-top: 0px;
+    margin-bottom: 70px;
+    font-size: 55px;
+    color : black;
+}
+
+p{
+    font-family: 'Avenir LT Std', Avenir LT Std, monospace
+}
 
 h2{
     color: white;
-    font-family: 'Caladea', Caladea, monospace
-    
+    font-family: 'Avenir LT Std', Avenir LT Std, monospace
 }
 
 
 h1{
     color: DodgerBlue;
     font-size: 100px;
-    font-family: 'Caladea', Caladea, monospace
+    font-family: 'Avenir LT Std', Avenir LT Std, monospace
+}
+
+.texto_retangulos{
+    color : white;
+    margin-bottom: 4%;
+    font-size: 30px;
+}
+
+input
+{
+    padding-left: 20px;
+    font-family: 'Avenir LT Std', Avenir LT Std, monospace;
+    font-size: 150%;
+    -moz-border-radius:50px; /* Firefox */
+    -webkit-border-radius: 50px; /* Safari, Chrome */
+    -khtml-border-radius: 50px; /* KHTML */
+    border-radius: 50px; /* CSS3 */
+    behavior:url("border-radius.htc");
 }
 
 #fisica{
@@ -37,30 +223,75 @@ h1{
     height: 40px; 
     background: dodgerblue;
     float: right;
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s
+    -webkit-transition: width 2s, height 2s, -webkit-transform 2s; /* Safari */
+    transition: width 2s, height 2s, transform 2s;
+}
+
+#frase_inicio{
+    font-size: 55px;
+    color: white;
+    margin-top: 220px;
+    margin-left: 55px;
 }
 
 #rectangle{
-    position: relative;
-    border-radius: 25px;
+    overflow: hidden;
+    float: left;
+    z-index: 1;
+    margin-left: 27%;
+    margin-right: 11%;
+    margin-top: 5%;    
+    border-radius: 40px;
     width: 300px; 
-    height: 40px; 
+    height: 125px; 
     background: dodgerblue;
-    float: right;
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s
+    -webkit-transition: width 0.5s, height 0.5s, -webkit-transform 0.5s; /* Safari */
+    transition: width 0.5s, height 0.5s, transform 0.5s;
 }
 
 #rectangle:hover{
-    position: relative;
-    border-radius: 25px;
+    float: left;
+    z-index: 1;
+    margin-left: 27%;
+    cursor: pointer;
+    background: dodgerblue;
+    margin-right: 11%;
+    margin-top: 5%;    
+    border-radius: 40px;
+    width: 309px; 
+    height: 134px; 
+    -webkit-transition: width 0.5s, height 0.5s, -webkit-transform 0.5s; /* Safari */
+    transition: width 0.5s, height 0.5s, transform 0.5s;
+}
+
+#rectangle2{
+    float: left;
+    margin-left: 27%;
+    margin-right: 11%;
+    z-index: 1;
+    margin-top: 4%;    
+    border-radius: 40px;
     width: 300px; 
-    height: 40px; 
-    background: blue;
-    float: right;
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s
+    height: 125px; 
+    background: dodgerblue;
+    -webkit-transition: width 0.5s, height 0.5s, -webkit-transform 0.5s; /* Safari */
+    transition: width 0.5s, height 0.5s, transform 0.5s;
+}
+
+#rectangle2:hover{
+    float: left;
+    margin-left: 27%;
+    margin-right: 11%;
+    z-index: 1;
+    cursor: pointer;
+    background: dodgerblue;
+    margin-right: auto;
+    margin-top: 4%;    
+    border-radius: 40px;
+    width: 309px; 
+    height: 134px; 
+    -webkit-transition: width 0.5s, height 0.5s, -webkit-transform 0.5s; /* Safari */
+    transition: width 0.5s, height 0.5s, transform 0.5s;
 }
 
 #whiterectangle{
@@ -141,6 +372,37 @@ h1{
     
     
 }
+
+#concluido{
+    position: absolute;
+    z-index: 1;
+    margin-left: 42.5%;
+    margin-right: 11%;
+    margin-top: 7.5%;    
+    border-radius: 40px;
+    width: 300px; 
+    height: 90px; 
+    background: dodgerblue;
+    -webkit-transition: width 0.5s, height 0.5s, -webkit-transform 0.5s; /* Safari */
+    transition: width 0.5s, height 0.5s, transform 0.5s;
+    cursor: pointer;
+}
+
+#concluido:hover{
+    position: absolute;
+    z-index: 1;
+    margin-left: 42.5%;
+    margin-right: 11%;
+    margin-top: 7.5%;    
+    border-radius: 40px;
+    width: 304px; 
+    height: 94px; 
+    background: dodgerblue;
+    -webkit-transition: width 0.5s, height 0.5s, -webkit-transform 0.5s; /* Safari */
+    transition: width 0.5s, height 0.5s, transform 0.5s;
+    cursor: pointer;
+}
+
 .background{
 	
 	height: 100px;
@@ -170,12 +432,13 @@ footer{
 }
 
 #botoes_meio{
+    overflow: hidden;
     color:white;
     font-size: 23px;
     font-weight: bolder;
     text-align: center;
     font-family: 'Caladea', Caladea, monospace;
-    margin-top = 0px;
+    margin-top : 0px;
     margin-bottom: 220px;
 }
 
@@ -217,6 +480,53 @@ footer{
 
 }
 
+#texto_ci{
+    
+    color:dodgerblue;
+    font-size: 48px;
+    font-weight: bold;
+    font-family: 'Caladea', Caladea, monospace;
+    padding-right: 0px;
+    padding-bottom: 50px;
+    padding-left: 170px;
+
+}
+
+#n_pessoas{
+    position: absolute;
+    margin-left: 39%;
+    width: 400px;
+    height: 40px;
+}
+
+#nome{
+    position: absolute;
+    margin-left: 39%;
+    width: 400px;
+}
+
+#telefone{
+    position: absolute;
+    margin-left: 39%;
+    margin-top: 1.5%;
+    width: 400px;
+}
+
+#cpf{
+    position: absolute;
+    margin-left: 39%;
+    margin-top: 3%;
+    width: 400px;
+}
+
+#rg{
+    position: absolute;
+    margin-left: 39%;
+    margin-bottom: 1%;
+    width: 400px;
+    margin-top: 4.5%;
+}
+
 #container_finalizado{
     position: relative;
     height: 400px; 
@@ -232,4 +542,15 @@ footer{
 
 .black{
 	color: black;
+}
+
+.caixas_texto{
+    margin-left: 9%;
+    margin-right: 0%;
+    font-size: 200%;
+}
+
+input[type="text"] {
+    width: 1400px;
+    height: 45px;
 }
