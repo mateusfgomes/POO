@@ -28,11 +28,11 @@ function cadastroIndividual(){
 }
 
 function cadastroFamiliar(){
-    window.location.href = "./cadastro_familiar.html";
+    window.location.href = "./cadastro_familiar.php";
 }
 
 function proxima_pessoa(){
-    window.location.href = "./cadastro_familiar_individual.html";
+    window.location.href = "./cadastro_familiar_individual.php";
 }
 
 function cadastroAbrigo(){

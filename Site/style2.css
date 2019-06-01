@@ -26,20 +26,23 @@ html, body {
 }
 
 #fazer_doacao{
+
+    font-family: 'Avenir LT Std', Avenir LT Std, monospace;    
     overflow: hidden;
     position: absolute;
     z-index: 1;
     font-size: 38px;
     margin-top: 683px;
-    margin-left: 195px;
+    margin-left: 209px;
     color: dodgerblue;
 
 }
 
 #voltar{
+    font-family: 'Avenir LT Std', Avenir LT Std, monospace;    
     position: absolute;
     margin-top: 500px;
-    margin-left: 900px;
+    margin-left: 910px;
     float: left;
     font-size: 38px;
     color : dodgerblue;
@@ -492,7 +495,6 @@ footer{
 
 }
 
-<<<<<<< HEAD
 #n_pessoas{
     position: absolute;
     margin-left: 39%;
@@ -527,8 +529,6 @@ footer{
     width: 400px;
     margin-top: 4.5%;
 }
-=======
->>>>>>> 2bc315b9d7f9e8db9ff04b15ed66b4d4684acdf9
 
 #container_finalizado{
     position: relative;
@@ -556,4 +556,10 @@ footer{
 input[type="text"] {
     width: 1400px;
     height: 45px;
+}
+
+input[type="number"] {
+    width: 1400px;
+    height: 45px;
+    -moz-appearance: textfield;
 }

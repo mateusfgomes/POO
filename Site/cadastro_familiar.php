@@ -9,7 +9,14 @@
                     <img id="img_3" src="tudo2.png">
                         <h1 id="procurando_abrigo">Cadastro Familiar</h1>
                         <h1 id="opcao" >Quantas pessoas?</h1>
-                        <form method="GET" action="cadastro_familiar_individual.php">    
+                        <form method="POST" action="cadastro_familiar_individual.php">
+                            <?php
+                                require_once("familia.php");
+                                session_start();
+                                $familia = new Familia();
+                                $_SESSION['familia'] = $familia;
+                                $_SESSION['contador'] = 0;
+                            ?>
                             <input tabindex="2" maxlength="11" min="1" max="10" required="required" placeholder="Insira um numero" type="number" id="n_pessoas" name="n_pessoas"><br><br>
                             <button id="concluido" type="submit">
                                 <h1 class="texto_retangulos">Próximo</h1>
