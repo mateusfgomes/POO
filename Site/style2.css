@@ -25,9 +25,60 @@ html, body {
     bottom: 0;
 }
 
+#banheiros{
+    position: absolute;
+    margin-left: 800px;
+    margin-top: 135.5px;
+    margin-bottom: 100px;
+    font-family: 'Avenir LT Std', Avenir LT Std, monospace;    
+    font-size: 20px;
+    color: dodgerblue;
+}
+
+#comida{
+    position: absolute;
+    margin-left: 800px;
+    margin-top: 185.5px;
+    margin-bottom: 100px;
+    font-family: 'Avenir LT Std', Avenir LT Std, monospace;    
+    font-size: 20px;
+    color: dodgerblue;
+}
+
+#tv{
+    position: absolute;
+    margin-left: 800px;
+    margin-top: 235.5px;
+    margin-bottom: 100px;
+    font-family: 'Avenir LT Std', Avenir LT Std, monospace;    
+    font-size: 20px;
+    color: dodgerblue;
+}
+
+#internet{
+    position: absolute;
+    margin-left: 800px;
+    margin-top: 285.5px;
+    margin-bottom: 100px;
+    font-family: 'Avenir LT Std', Avenir LT Std, monospace;    
+    font-size: 20px;
+    color: dodgerblue;
+}
+
+#cama{
+    position: absolute;
+    margin-left: 800px;
+    margin-top: 335.5px;
+    margin-bottom: 100px;
+    font-family: 'Avenir LT Std', Avenir LT Std, monospace;    
+    font-size: 20px;
+    color: dodgerblue;
+}
+
 #fazer_doacao{
 
     font-family: 'Avenir LT Std', Avenir LT Std, monospace;    
+    font-weight: bold;
     overflow: hidden;
     position: absolute;
     z-index: 1;
@@ -41,8 +92,23 @@ html, body {
 #voltar{
     font-family: 'Avenir LT Std', Avenir LT Std, monospace;    
     position: absolute;
+    font-weight: bold;
     margin-top: 500px;
     margin-left: 910px;
+    float: left;
+    font-size: 38px;
+    color : dodgerblue;
+}
+
+#voltar_inicio{
+    font-family: 'Avenir LT Std', Avenir LT Std, monospace;    
+    font-weight: bold;
+    position: absolute;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 786px;
+    margin-right: 779px;
+    text-align: center;
     float: left;
     font-size: 38px;
     color : dodgerblue;
@@ -63,6 +129,13 @@ html, body {
 img{
     height: 100%;
     width: 100%;
+}
+
+#img_fim{
+    z-index: 0;
+    object-fit: none;
+    margin-bottom: -47%;
+    margin-top: -26%;
 }
 
 #img_3{
@@ -101,6 +174,13 @@ img{
     font-size: 40px;
     text-align: center;
     margin-top: 100px;
+}
+
+#agradecimento{
+    z-index: 1;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 250px;
 }
 
 #familia{
@@ -391,6 +471,36 @@ input
     cursor: pointer;
 }
 
+#proximo{
+    position: absolute;
+    z-index: 1;
+    margin-left: 42.5%;
+    margin-right: 11%;
+    margin-top: 23%;    
+    border-radius: 40px;
+    width: 300px; 
+    height: 90px; 
+    background: dodgerblue;
+    -webkit-transition: width 0.5s, height 0.5s, -webkit-transform 0.5s; /* Safari */
+    transition: width 0.5s, height 0.5s, transform 0.5s;
+    cursor: pointer;
+}
+
+#proximo2{
+    position: absolute;
+    z-index: 1;
+    margin-left: 42.5%;
+    margin-right: 11%;
+    margin-top: 13%;    
+    border-radius: 40px;
+    width: 300px; 
+    height: 90px; 
+    background: dodgerblue;
+    -webkit-transition: width 0.5s, height 0.5s, -webkit-transform 0.5s; /* Safari */
+    transition: width 0.5s, height 0.5s, transform 0.5s;
+    cursor: pointer;
+}
+
 #concluido:hover{
     position: absolute;
     z-index: 1;
@@ -530,6 +640,22 @@ footer{
     margin-top: 4.5%;
 }
 
+#numero{
+    position: absolute;
+    margin-left: 39%;
+    margin-bottom: 1%;
+    width: 400px;
+    margin-top: 7%;
+}
+
+#complemento{
+    position: absolute;
+    margin-left: 39%;
+    margin-bottom: 1%;
+    width: 400px;
+    margin-top: 9.5%;
+}
+
 #container_finalizado{
     position: relative;
     height: 400px; 
@@ -562,4 +688,88 @@ input[type="number"] {
     width: 1400px;
     height: 45px;
     -moz-appearance: textfield;
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    width: 1.3em;
+    height: 1.3em;
+    background-color: lightblue;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    -webkit-appearance: none;
+    outline: 3%;
+    outline-color: dodgerblue;
+    cursor: pointer;
+}
+
+#banheiros_botao{
+    position: absolute;
+    margin-left: 750px;
+    margin-top: 131px;
+    margin-bottom: 100px;
+    font-family: 'Avenir LT Std', Avenir LT Std, monospace;    
+    font-size: 20px;
+    color: dodgerblue;
+}
+
+#banheiros_botao:checked {
+    background-color: dodgerblue;
+}
+
+#comida_botao{
+    position: absolute;
+    margin-left: 750px;
+    margin-top: 181px;
+    margin-bottom: 100px;
+    font-family: 'Avenir LT Std', Avenir LT Std, monospace;    
+    font-size: 20px;
+    color: dodgerblue;
+}
+
+#comida_botao:checked {
+    background-color: dodgerblue;
+}
+
+#tv_botao{
+    position: absolute;
+    margin-left: 750px;
+    margin-top: 231px;
+    margin-bottom: 100px;
+    font-family: 'Avenir LT Std', Avenir LT Std, monospace;    
+    font-size: 20px;
+    color: dodgerblue;
+}
+
+#tv_botao:checked {
+    background-color: dodgerblue;
+}
+
+#internet_botao{
+    position: absolute;
+    margin-left: 750px;
+    margin-top: 281px;
+    margin-bottom: 100px;
+    font-family: 'Avenir LT Std', Avenir LT Std, monospace;    
+    font-size: 20px;
+    color: dodgerblue;
+}
+
+#internet_botao:checked {
+    background-color: dodgerblue;
+}
+
+#cama_botao{
+    position: absolute;
+    margin-left: 750px;
+    margin-top: 331px;
+    margin-bottom: 100px;
+    font-family: 'Avenir LT Std', Avenir LT Std, monospace;    
+    font-size: 20px;
+    color: dodgerblue;
+}
+
+#cama_botao:checked {
+    background-color: dodgerblue;
 }

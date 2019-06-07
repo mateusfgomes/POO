@@ -32,6 +32,10 @@ require_once("familia.php");
         }
         
         for($j = 0; $j < count($_SESSION['familia']->getFamilia()); $j++){
+            if($_SESSION['familia']->getFamilia()[$j]->getNome() == '' || $_SESSION['familia']->getFamilia()[$j]->getNome() == null){
+                session_destroy();
+                die("Falha");
+            }
             fwrite($dados, $_SESSION['familia']->getFamilia()[$j]->getNome());
             fwrite($dados, ",");
             fwrite($dados, $_SESSION['familia']->getFamilia()[$j]->getTelefone());

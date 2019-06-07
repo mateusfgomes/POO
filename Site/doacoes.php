@@ -24,4 +24,6 @@
 
     fclose($valores);
 
+    header("Location: http://teamabrigo.com/final_doacao.php");
+
 ?>

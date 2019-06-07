@@ -8,20 +8,16 @@
         fwrite($dados, "rg");
         fwrite($dados, "\n");
     }
-    function verificaCPF(){
-
-        for($i = 0; $i < str_len(); $i++){
-            
-        }
-
-        
-    }
     
     function escreveArquivo($aux_nome, $aux_tel, $aux_cpf, $aux_rg){
 
         $pessoa = new Individuo();
 
         $pessoa->setNome($aux_nome);
+        if($pessoa->getNome() == '' || $pessoa->getNome() == null){
+            session_destroy();
+            die("Falha");
+        }
         $pessoa->setTelefone($aux_tel);
         $pessoa->setCPF($aux_cpf);
         $pessoa->setRg($aux_rg);

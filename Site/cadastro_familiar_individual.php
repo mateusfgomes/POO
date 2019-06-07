@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
+        <title>TeamAbrigo</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<link rel="stylesheet" type="text/css" href="./style2.css">      
 		<body>
@@ -18,7 +19,7 @@
                                 $_SESSION['contador']++;
                             ?>
                             <input tabindex="2" maxlength="170" required="required" placeholder="Nome" type="text" id="nome" name="nome"><br><br>
-                            <input tabindex="2" maxlength="11" pattern="([0-9]{11})" placeholder="Telefone" type="text" id="telefone" name="telefone"><br><br>
+                            <input tabindex="2" maxlength="11" pattern="([0-9]{10,11})" title="Preencha este campo no formato XXXXXXXXXX ou no formato YY9YYYYYYYY." placeholder="Telefone" type="text" id="telefone" name="telefone"><br><br>
                             <input tabindex="2" maxlength="11" pattern="([0-9]{11})" required="required" placeholder="CPF" type="text" id="cpf" name="cpf"><br><br>
                             <input tabindex="2" maxlength="9" pattern="([0-9]{9})" required="required" placeholder="RG" type="text" id="rg" name="rg"><br>
                             <button id="concluido" type="submit">

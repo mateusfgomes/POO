@@ -15,6 +15,34 @@ function fazerDoacao(){
 
 }
 
+function verificaCheckboxes(){
+    
+    var banheiros = 0;
+    var comida = 0;
+    var internet = 0;
+    var tv = 0;
+    var cama = 0;
+
+    if(document.getElementById('banheiros_botao').checked){
+        banheiros = 1;
+    }
+    if(document.getElementById('comida_botao').checked){
+        comida = 1;
+    }
+    if(document.getElementById('internet_botao').checked){
+        internet = 1;   
+    }
+    if(document.getElementById('tv_botao').checked){
+        tv = 1;   
+    }
+    if(document.getElementById('cama_botao').checked){
+        cama = 1;   
+    }
+
+    window.location.href = "./finalizado_juridica.php?qtde=" + document.getElementsByName('qtde') + "&banheiros="  + banheiros + "&comida=" + comida + "&internet=" + internet + "&tv=" + tv + "&cama=" + cama;
+
+}
+
 function pagSeguro(){
     window.location.href = "https://pagseguro.uol.com.br/#rmcl";
 }
@@ -36,8 +64,17 @@ function proxima_pessoa(){
 }
 
 function cadastroAbrigo(){
-    window.location.href = "./cadastro_abrigo.html";
+    window.location.href = "./oferecendo_abrigo.html";
 }
+
+function pessoaFisica(){
+    window.location.href = "./pessoa_fisica.html";
+}
+
+function pessoaJuridica(){
+    window.location.href = "./pessoa_juridica.html";
+}
+
 
 
 function mCPF(cpf){
