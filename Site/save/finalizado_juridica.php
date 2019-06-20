@@ -1,10 +1,13 @@
 <?php
-    require_once("PessoaFisica.php");
+    require_once("/var/www/teamabrigo.com/objects/PessoaJuridica.php");
 
-    function escreveCabecalhoFisica($dados){
+    /**
+     * Funcao que escreve o cabecalho que armazena os dados de pessoas juridicas
+     */
+    function escreveCabecalhoJuridica($dados){
         fwrite($dados, "nome,");
         fwrite($dados, "endereco,");
-        fwrite($dados, "cpf,");
+        fwrite($dados, "cnpj,");
         fwrite($dados, "numero,");
         fwrite($dados, "complemento,");
         fwrite($dados, "telefone,");
@@ -17,21 +20,24 @@
         fwrite($dados, "\n");
     }
 
+    /**
+     * Funcao que escreve uma pessoa juridica
+     */
     function escrevePessoa($pessoa){
 
-        $dados = fopen("/home/mateus/Documentos/Dados/abrigo_fisica.csv", "a+") or die("Failed"); 
+        $dados = fopen("/home/mateus/Arquivos/abrigo_juridica.csv", "a+") or die("Failed"); 
         $conteudo = '';
         $conteudo = fread($dados, 1);
 
         if($conteudo == ''){
-            escreveCabecalhoFisica($dados);
+            escreveCabecalhoJuridica($dados);
         }
         
         fwrite($dados, $pessoa->getNome());
         fwrite($dados, ",");
         fwrite($dados, $pessoa->getEndereco());
         fwrite($dados, ",");
-        fwrite($dados, $pessoa->getCPF());
+        fwrite($dados, $pessoa->getCNPJ());
         fwrite($dados, ",");
         fwrite($dados, $pessoa->getNumero());
         fwrite($dados, ",");
@@ -43,11 +49,11 @@
         fwrite($dados, ",");
         fwrite($dados, $pessoa->getComida());
         fwrite($dados, ",");
+        fwrite($dados, $pessoa->getTv());
+        fwrite($dados, ",");
         fwrite($dados, $pessoa->getBanheiros());
         fwrite($dados, ",");
         fwrite($dados, $pessoa->getInternet());
-        fwrite($dados, ",");
-        fwrite($dados, $pessoa->getTv());
         fwrite($dados, ",");
         fwrite($dados, $pessoa->getCama());
         fwrite($dados, "\n");
@@ -56,8 +62,13 @@
 
     }
 
+    /**
+     * Codigo que escreve uma pessoa juridica
+     * no arquivo de dados
+     */
     session_start();
-    $pessoa = new PessoaFisica();
+
+    $pessoa = new PessoaJuridica();
 
 
     $pessoa->setNome($_SESSION['nome']);
@@ -65,18 +76,22 @@
         die();
     }
     $pessoa->setEndereco($_SESSION['endereco']);
-    $pessoa->setCPF($_SESSION['cpf']);
+    $pessoa->setCNPJ($_SESSION['cnpj']);
     $pessoa->setNumero($_SESSION['numero']);
     $pessoa->setComplemento($_SESSION['complemento']);
     $pessoa->setTelefone($_SESSION['telefone']);
     $pessoa->setMaxpessoas($_POST['qtde']);
 
+    
     $_POST['tv'] = (isset($_POST['tv'])) ? true : false;
     $_POST['banheiros'] = ( isset($_POST['banheiros']) ) ? true : false;
     $_POST['cama'] = ( isset($_POST['cama']) ) ? true : false;
     $_POST['internet'] = ( isset($_POST['internet']) ) ? true : false;
     $_POST['comida'] = ( isset($_POST['comida']) ) ? true : false;
 
+    /**
+     * Verifica se as checkboxes estao marcadas
+     */
     if($_POST['comida']){
         $pessoa->setComida();
     }
@@ -97,5 +112,4 @@
 
     session_destroy();
     header("Location: http://teamabrigo.com/final.html");
-
 ?>

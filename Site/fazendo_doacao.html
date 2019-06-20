@@ -1,26 +1,32 @@
+<!--
+
+    Fazendo doacao
+    Nessa pagina, o usuario deve inserir seu CPF
+    (Nao sao aceitos caracteres como letras, caracteres especiais...)
+    E doacao
+
+-->
 <!DOCTYPE html>
-<html lang="pt-br">
-	<head>
+<html lang="pt-br"><head>
         <title>TeamAbrigo</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<link rel="stylesheet" type="text/css" href="./style2.css">      
-		<body>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="stylesheet" type="text/css" href="style2.css">      
+		</head><body>
             <main><script src="funcoes.js"></script></main>
                 <div id="container3">
                     <img id="img_3" src="tudo2.png">
                         <h1 id="procurando_abrigo">Fazer Doação</h1>
-                        <h1 id="opcao" >Quanto você deseja doar?</h1>
-                        <form method="POST" action="doacoes.php">    
-                                <input tabindex="2" maxlength="11" pattern="([0-9]{11})" required="required" placeholder="CPF" type="text" id="cpf" name="cpf"><br><br>
-                                <input tabindex="2" maxlength="7" required="required" placeholder="Quantia(R$)" type="text" id="telefone" name="doacao"><br>
+                        <h1 id="opcao">Quanto você deseja doar?</h1>
+                        <form method="POST" action="doacoes.php"> <!--Envia os dados para o registro das doacoes-->
+                                <input tabindex="2" maxlength="11" pattern="([0-9]{11})" required="required" placeholder="CPF" type="text" id="cpf" name="cpf" value="66666666666"><br><br>
+                                <input tabindex="2" maxlength="7" required="required" placeholder="Quantia(R$)" type="text" name="doacao" id="rg" value="566"><br>
                             <button id="concluido" type="submit" onclick="pagSeguro()">
                                 <h1 class="texto_retangulos">Concluído</h1>
                             </button>
                         </form>
-                    </img>    
                 </div>
             <footer>
             </footer>
-        </body>
-    </head>
-</html>
+        
+    
+</body></html>

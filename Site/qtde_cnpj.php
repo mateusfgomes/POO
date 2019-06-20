@@ -1,3 +1,8 @@
+<!---
+
+    Pagina que coleta quais serao os oferecimentos dados por pessoas juridicas
+
+-->
 <!DOCTYPE html>
     <html lang="pt-br">
         <head>
@@ -11,8 +16,11 @@
                     <img id="img_3" src="tudo2.png">
                         <h1 id="procurando_abrigo">Finalizando...</h1>
                         <h1 id="opcao">Preencha as últimas informações</h1>
-                        <form method="POST" action="finalizado_juridica.php">
+                        <form method="POST" action="/save/finalizado_juridica.php">
                             <?php
+                                /**
+                                 * Sessao iniciada para carregar as variaveis atraves das paginas
+                                 */
                                 session_start();
                                 $_SESSION['nome'] = $_POST['nome'];
                                 $_SESSION['telefone'] = $_POST['telefone'];

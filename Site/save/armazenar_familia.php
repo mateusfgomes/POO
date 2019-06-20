@@ -1,21 +1,26 @@
 <?php
-require_once("familia.php");
+require_once("/var/www/teamabrigo.com/objects/familia.php");
 
-
+    /**
+     * Funcao que escreve o cabecalho de um arquivo que contem familias
+     */
     function escreveCabecalho($dados){
         fwrite($dados, "nome,");
         fwrite($dados, "telefone,");
         fwrite($dados, "cpf,");
         fwrite($dados, "rg,");
-        fwrite($dados, "tag");
+        fwrite($dados, "tag"); //"Numero" da familia
         fwrite($dados, "\n");
     }
 
+    /**
+     * Funcao que escreve os dados coletados da familia em um arquivo
+     */
     function escreveFamilia(){
 
         session_start();
 
-        $dados = fopen("/home/mateus/Documentos/Dados/dados_familia.csv", "a+") or die("Failed"); 
+        $dados = fopen("/home/mateus/Arquivos/dados_familia.csv", "a+") or die("Failed"); 
         $conteudo = '';
         $conteudo = fread($dados, 1);
         $tag = 0;
@@ -32,6 +37,9 @@ require_once("familia.php");
         }
         
         for($j = 0; $j < count($_SESSION['familia']->getFamilia()); $j++){
+            /**
+             * Para evitar que o usuario recarregue a pagina e fique gravando varias vezes
+             */
             if($_SESSION['familia']->getFamilia()[$j]->getNome() == '' || $_SESSION['familia']->getFamilia()[$j]->getNome() == null){
                 session_destroy();
                 die("Falha");
@@ -51,6 +59,9 @@ require_once("familia.php");
         fclose($dados);
     }
 
+    /**
+     * Funcao que adiciona uma pessoa no vetor de pessoas(add um individuo na familia)
+     */
     function colocaPessoa($nome, $telefone, $cpf, $rg){
 
         session_start();

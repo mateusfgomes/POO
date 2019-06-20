@@ -1,3 +1,6 @@
+<!--
+    Pagina carregada ao finalizar a doacao
+-->
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>

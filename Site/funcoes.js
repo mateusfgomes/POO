@@ -1,52 +1,9 @@
-function concluido() {
-    var nome = document.getElementById("nome");
-    var valor_nome = nome.value;
-    var telefone = document.getElementById("telefone");
-    var valor_telefone = telefone.value;
-    var cpf = document.getElementById("cpf");
-    var valor_cpf = cpf.value;
-    var rg = document.getElementById("rg");
-    var valor_rg = rg.value;
-
-    window.location.href = "./finalizado.html";
-}
-
-function fazerDoacao(){
-
-}
-
-function verificaCheckboxes(){
-    
-    var banheiros = 0;
-    var comida = 0;
-    var internet = 0;
-    var tv = 0;
-    var cama = 0;
-
-    if(document.getElementById('banheiros_botao').checked){
-        banheiros = 1;
-    }
-    if(document.getElementById('comida_botao').checked){
-        comida = 1;
-    }
-    if(document.getElementById('internet_botao').checked){
-        internet = 1;   
-    }
-    if(document.getElementById('tv_botao').checked){
-        tv = 1;   
-    }
-    if(document.getElementById('cama_botao').checked){
-        cama = 1;   
-    }
-
-    window.location.href = "./finalizado_juridica.php?qtde=" + document.getElementsByName('qtde') + "&banheiros="  + banheiros + "&comida=" + comida + "&internet=" + internet + "&tv=" + tv + "&cama=" + cama;
-
-}
-
+/**
+ * Funcoes utilizadas para redirecionamento da pagina
+ */
 function pagSeguro(){
     window.location.href = "https://pagseguro.uol.com.br/#rmcl";
 }
-
 function procurandoAbrigo(){
     window.location.href = "./procurando_abrigo.html";
 }
@@ -75,22 +32,14 @@ function pessoaJuridica(){
     window.location.href = "./pessoa_juridica.html";
 }
 
-
-
+/**
+ * Funcao que eh utilizada para adicionar a mascara do CPF enquanto o usuario digita o valor desse campo 
+ * @param {1} cpf: O cpf com a mascara
+ */
 function mCPF(cpf){
     cpf=cpf.replace(/\D/g,"")
     cpf=cpf.replace(/(\d{3})(\d)/,"$1.$2")
     cpf=cpf.replace(/(\d{3})(\d)/,"$1.$2")
     cpf=cpf.replace(/(\d{3})(\d{1,2})$/,"$1-$2")
     return cpf
-}
-
-function fMascEx() {
-    obj.value=masc(obj.value)
-}
-
-function fMasc(objeto,mascara) {
-    obj=objeto
-    masc=mascara
-    setTimeout("fMascEx()",1)
 }

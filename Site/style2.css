@@ -1,4 +1,14 @@
-#container{
+/*
+
+ARQUIVO CSS QUE ESTILIZA TODAS AS PAGINAS DO SITE,
+SE REMOVIDO, O DESIGN DO SITE PASSA A DEPENDER SOMENTE DO HTML5
+
+
+*/
+
+
+
+#container{   
     overflow: hidden;
 	background-color: white;
     text-align: center;
@@ -6,11 +16,10 @@
     margin: auto;
     height: 100%;
     width: 34.4%;
-    
 }
 
 html, body {
-    height:100%;
+    height: 100%;
     width: 100%;
 }
 
@@ -249,6 +258,8 @@ img{
     text-align: center;
     color: black;
     margin-top: 0%;
+    margin-bottom: 2%;
+    
 
 }
 
@@ -454,6 +465,13 @@ input
     vertical-align: 0px;
     
     
+}
+
+#pessoaatual{
+    color: black;
+    font-size: 60px;
+    text-align: center;
+    margin-top: 10px;
 }
 
 #concluido{

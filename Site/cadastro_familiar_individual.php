@@ -1,3 +1,6 @@
+<!---
+    Pagina que se repete N vezes (uma para cada membro da familia)
+-->
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
@@ -12,10 +15,15 @@
                         <h1 id="opcao" >Preencha os dados</h1>
                         <form method="POST" action="finalizado_familia.php">
                             <?php
+                                /**
+                                 * Iniciando a sessao para controlar se o numero correto 
+                                 * de pessoas ja foi adicionado
+                                 */
                                 session_start();
                                 if($_SESSION['contador'] == 0){
                                     $_SESSION['n_pessoas'] = $_POST['n_pessoas'];
                                 }
+                                echo "<h1 id='pessoaatual'>".($_SESSION['contador'] + 1) . "ª pessoa"."</h1>";                                
                                 $_SESSION['contador']++;
                             ?>
                             <input tabindex="2" maxlength="170" required="required" placeholder="Nome" type="text" id="nome" name="nome"><br><br>

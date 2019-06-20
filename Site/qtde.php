@@ -1,3 +1,7 @@
+<!---
+    Quando a pessoa oferece um abrigo, para escolher o que os novos moradores terao direito
+    de usar aqui se recolhe estas informacoes
+-->
 <!DOCTYPE html>
     <html lang="pt-br">
         <head>
@@ -11,7 +15,8 @@
                     <img id="img_3" src="tudo2.png">
                         <h1 id="procurando_abrigo">Finalizando...</h1>
                         <h1 id="opcao">Preencha as últimas informações</h1>
-                        <form method="POST" action="finalizado_fisica.php">
+                        <form method="POST" action="/save/finalizado_fisica.php">
+                            <!--Inicia-se uma sessao para poder se carregar os valores anteriormente dados pelas paginas-->
                             <?php
                                 session_start();
                                 $_SESSION['nome'] = $_POST['nome'];
